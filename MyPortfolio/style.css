@@ -56,7 +56,6 @@ body {
     border-radius: 50%;
     margin: 15% auto;
     grid-column: 2/3;
-    transform: rotate(90deg);
   }
   
   h1 {
