@@ -1,3 +1,6 @@
+* {
+    background-color: #ffe4f6;
+}
 h1 {
     color: #df2ba9;
     font-family: sofia;
@@ -61,10 +64,10 @@ body{
     text-align: center;
 }
 
-.contact {
+.right {
     border-left: solid black 1px;
     padding: 10px;
-    width: 70%;
+    width: 60%;
 }
 
 li p{
@@ -81,4 +84,8 @@ div p{
 .icons {
     color: black;
     font-family: wingdings;
+}
+
+.contact {
+    margin-bottom: 200px;
 }
