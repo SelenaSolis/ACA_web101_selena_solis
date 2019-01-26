@@ -1,8 +1,9 @@
 * {
-    background-color: #ffe4f6;
+    background-color: #fcf1f8;
 }
+
 h1 {
-    color: #df2ba9;
+    color: #af4991;
     font-family: sofia;
     font-size: 70px;
     line-height: 60px;
@@ -10,7 +11,7 @@ h1 {
 }
 
 h3, h2 {
-    color: #df2ba9;
+    color: #c0519f;
     text-align: center;
     font-family: sofia;
     font-size: 30px;
