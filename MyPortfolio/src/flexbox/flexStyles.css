@@ -1,0 +1,23 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    background-color: #dab3c5;
+} 
+.container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+}
+
+.container div{
+    border: 2px solid white;
+    width:500px;
+    height:500px;
+}
+
+.header{
+      background-color: #8a6275;
+      text-align:center;
+}
+
