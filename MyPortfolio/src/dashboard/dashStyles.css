@@ -1,22 +1,35 @@
 * {
     box-sizing: border-box;
 }
+
+body{
+    background-color:#8a6275;
+}
 .container {
     display: grid;
-    grid-template-columns:350px 300px 300px 400px 300px;
+    grid-template-columns:350px 300px 300px 400px;
     grid-template-rows: 60px 320px 180px 150px;
     overflow: auto;
+    overflow:hidden;
+}
+
+.name {
+    text-align:center;
+}
+.greeting {
+    text-align:left;
 }
 
 .header {
     display:grid;
-    grid-column:1/6;
+    grid-column:1/5;
     grid-row:1/2;
-    background-color:blue;
+    background-color: #8a6275;
 }
 
 .header h1{
     margin:10px 0px;
+    color:white;
 }
 
 .greeting{
@@ -29,15 +42,18 @@
     grid-column:1/2;
     display:grid;
     grid-template-rows:50px 50px 40px 40px 40px 40px 40px 40px;
+    background-color: #f7ebdf;
+    border:1px solid black;
 }
 
 .month {
-    background-color: pink;
+    background-color: #eccad4;
     grid-row:1/2;
 }
 .month h2 {
     text-align: center;
     margin:10px;
+    color: #694b59;
 }
 .dow {
     grid-row: 2/3;
@@ -46,6 +62,7 @@
 }
 .sunday {
     grid-column:1/2;
+    margin-left:15px;
 }
 .monday {
     grid-column:2/3;
@@ -70,31 +87,37 @@
     grid-row: 3/4;
     display:grid;
     grid-template-columns: 50px 50px 50px 50px 50px 50px 50px;
+    margin-left:15px;
 }
 .week2 {
     grid-row: 4/5;
     display:grid;
     grid-template-columns: 50px 50px 50px 50px 50px 50px 50px;
+    margin-left:15px;
 }
 .week3 {
     grid-row: 5/6;
     display:grid;
     grid-template-columns: 50px 50px 50px 50px 50px 50px 50px;
+    margin-left:15px;
 }
 .week4 {
     grid-row: 6/7;
     display:grid;
     grid-template-columns: 50px 50px 50px 50px 50px 50px 50px;
+    margin-left:15px;
 }
 .week5 {
     grid-row: 7/8;
     display:grid;
     grid-template-columns: 50px 50px 50px 50px 50px 50px 50px;
+    margin-left:15px;
 }
 .week6 {
     grid-row: 8/9;
     display:grid;
     grid-template-columns: 50px 50px 50px 50px 50px 50px 50px;
+    margin-left:15px;
 }
 
 .pic1{
@@ -105,18 +128,23 @@
 .pic1 img{
     margin-top:-10px;
     width:100%;
+    border:1px solid black;
 }
 
 .clock {
-    grid-row:3/4;
-    grid-column:2/3;
-    
+    grid-row:4/5;
+    grid-column:4/5;
+    background-color: #f7ebdf;
+    border-bottom: 20px solid hsl(332, 17%, 46%);
+    border:1px solid black;
+    min-width:300px;
 }
 
 .clock h1 {
-    color:pink;
-    font-size: 100px;
+    font-size:100px;
+    color:#694b59;
     text-align:center;
+    margin:10px;
 }
 
 .pic2 {
@@ -127,16 +155,22 @@
 .pic2 img {
     width:100%;
     height:180px;
+    border:1px solid black;
 }
 
 .temp{
     grid-row:4/5;
     grid-column:1/2;
+    background-color: #f7ebdf;
+    border-bottom: 20px solid #8a6275;
+    border:1px solid black;
+    min-width:300px;
 }
+
 
 .temp h1{
     font-size:100px;
-    color:pink;
+    color:#694b59;
     text-align:center;
     margin:10px;
 }
@@ -162,7 +196,7 @@ body {
   }
   
   .calc-screen {
-    background: pink;
+    background: #f7ebdf;
     width: 100%;
     height: 150px;
     padding: 20px;
@@ -171,7 +205,7 @@ body {
   
   .calc-operation {
     text-align: right;
-    color:white;
+    color:#3A4655;
     font-size: 21px;
     padding-bottom: 10px;
     border-bottom: dotted 1px;
@@ -181,18 +215,18 @@ body {
     margin-top: 20px;
     font-size: 45px;
     text-align: right;
-    color: #fff;
+    color: #3A4655;
   }
   
   .calc-button-row {
     width: 100%;
-    background: pink;
+    background: #eccad4;
   }
   
   .button {
     width: 25%;
-    background: pink;
-    color: rgb(138, 49, 104);
+    background: #eccad4;
+    color: #8a6275;
     padding: 20px;
     display: inline-block;
     font-size: 25px;
@@ -206,37 +240,259 @@ body {
   }
   
   .button.l {
-    color: rgb(138, 49, 104);
-    background: pink;
+    color: #8a6275;
+    background: #eccad4;
   }
   
   .button.c {
     color: rgb(3, 3, 3);
-    background: rgb(138, 49, 104);
+    background: #8a6275;
   }
   
   .button:hover {
-    background: #E0B612;
+    background: rgb(214, 183, 142);
     transform: rotate(5deg);
   }
   
   .button.c:hover,
   .button.l:hover {
-    background: #E0B612;
+    background: rgb(214, 183, 142);
     color: #fff;
   }
   
   .blink-me {
-    color: #E0B612;
+    color: rgb(214, 183, 142);
   }
 
   .pic3 {
       grid-row:3/5;
       grid-column:3/4;
-      overflow:hidden;
   }
 
-  .pic3 img{
-      margin:-20px 0px;
-      width:300px;
+  .pic3 img {
+    border:1px solid black;
+  }
+
+  .todo{
+      grid-row:3/5;
+      grid-column:2/3;
+      background-color: #eccad4;
+      border:1px solid black;
+  }
+  .todoHeader{
+      color:#694b59;
+      text-align:center;
+  }
+
+
+  @media (max-width: 1350px) {
+
+    .container {
+            justify-content:center;
+    }
+    .header {
+        flex:initial;
+        width:100%;
+        order:-3;
+    }
+
+    .pic1 {
+        display:none;
+    }
+
+    .pic2 {
+        display:none;
+    }
+
+    .clock {
+        flex:1;
+        border:1px solid black;
+    }
+
+    .temp {
+        flex:1;
+        border:1px solid black;
+    }
+
+    .pic3 img {
+        border:none;
+        height:500px;
+        width:350px;
+    }
+
+    .temp{
+        border:none;
+        order:-2;
+        align-items: center;
+    }
+
+    .clock{
+        border:none;
+        order:-3;
+    }
+
+    .calendar{
+        order:-2;
+        border:1px solid black;
+    }
+
+    .todo{
+        order:0;
+        border:none;
+        flex:1;
+    }
+
+    .calculator{
+        order:-1;
+    }
+
+    .container {
+        display:flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+    }
+  }
+
+
+  @media (max-width: 1000px) {
+    .container {
+        justify-content:center;
+    }
+    .clock {
+        height: 160px;
+        min-width:300px;
+        flex:1;
+        border:1px solid black;
+    }
+
+    .temp {
+        height:160px;
+        order:-3;
+        flex:1;
+        min-width:300px;
+        border:1px solid black;
+    }
+
+    .todo {
+        min-width:200px;
+        order: -2;
+    }
+    
+    .pic3 {
+        width:100%;
+        order:-1;
+        flex:1;
+    }
+
+    @media (max-width: 790px) {
+        .container {
+            justify-content: center;
+            display:flex;
+        }
+        .pic3 {
+            display:none;
+        }
+        .clock {
+            /*width:300px;*/
+            height:100px;
+        }
+
+        .temp{
+            /*width:300px;*/
+            height:100px;
+        }
+
+        .temp h1 {
+            font-size:70px;
+        }
+
+        .calendar {
+            width:300px;
+        }
+
+        .dow{
+            margin:0px;
+            width:300px;
+            display:flex;
+            justify-content:space-around;
+        }
+
+        .week1 {
+            margin:0px;
+            width:300px;
+            display:flex;
+            justify-content:space-around;
+        }
+
+        .week2 {
+            margin:0px;
+            width:300px;
+            display:flex;
+            justify-content:space-around;
+        }
+
+        .week3 {
+            margin:0px;
+            width:300px;
+            display:flex;
+            justify-content:space-around;
+        }
+
+        .week4 {
+            margin:0px;
+            width:300px;
+            display:flex;
+            justify-content:space-around;
+        }
+
+        .week5 {
+            margin:0px;
+            width:300px;
+            display:flex;
+            justify-content:space-around;
+        }
+
+        .week6 {
+            margin:0px;
+            width:300px;
+            display:flex;
+            justify-content:space-around;
+        }
+
+        .clock h1{
+            font-size:70px;
+        }
+
+        .calculator {
+            display:flex;
+            min-width:300px;
+
+        }
+        .calc-body {
+            margin: auto;
+            min-height: 400px;
+            border: solid 1px #3A4655;
+        }
+
+        .calc-screen {
+            display:flex;
+        }
+
+        .calc-button-row {
+            display:flex;
+        }
+        .todo {
+            border:1px solid black;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                display:flex;
+                flex-direction:column;
+                justify-content: center;
+            }
+            .clock {
+                flex: 1;
+            }
+        }
   }
