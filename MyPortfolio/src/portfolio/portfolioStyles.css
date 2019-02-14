@@ -1,0 +1,71 @@
+*{
+    background-color: #553c4b;
+}
+.nav{
+    background-color: pink;
+}
+nav a p{
+    background-color: pink;
+    letter-spacing: 100px;
+    text-align:center;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.intro a{
+    text-decoration:none;
+    font-family:georgia;
+    color:white;
+}
+.intro a:hover{
+    color:pink;
+}
+
+div h1{
+    font-size:50px;
+    font-family:georgia;
+    color:white;
+    text-align:center;
+}
+
+.intro{
+    width:100%;
+    margin: 200px auto;
+}
+
+.projectList{
+    display:flex;
+    flex-direction: row;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project{
+    border: 3px solid white;
+    width:300px;
+    height:300px;
+    margin:30px 30px;
+}
+
+.project a img{
+    border:1px solid white;
+    width:250px;
+    height:250px;
+    margin:0px 21px;
+}
+
+.project a{
+    text-align:center;
+    color:pink;
+}
+
+.name:hover .nameFrame{
+    
+}
+
+.nameFrame iframe{
+    width:400px;
+    height:400px;
+}
