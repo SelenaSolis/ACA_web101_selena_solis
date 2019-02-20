@@ -82,3 +82,11 @@ figure{
     margin:0px;
 }
 
+@media (max-width: 756px) {
+    .cutOptions{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+    }
+}
+
