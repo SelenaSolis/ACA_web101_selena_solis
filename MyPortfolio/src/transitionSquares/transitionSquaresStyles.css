@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box;
+}
+
+.sq{
+    height:50px;
+    width:50px;
+    clear:both;
+    margin:10px auto;
+}
+
+.sq.Red{
+    border: 2px solid red;
+    transition: all 2s, border-radius 3s;
+}
+.container:hover .sq.Red{
+    width:100px;
+    height:100px;
+    border-radius:100%;
+    transform: translateX(500px) rotate(360deg);
+}
+
+
+.sq.DarkGreen{
+    border: 2px solid darkgreen;
+    transition: all 2s, border-radius 3s;
+    transition-delay: .2s;
+}
+.container:hover .sq.DarkGreen{
+    width:25px;
+    height:25px;
+    border-radius:100%;
+    transform: translate(-500px) rotate(-360deg);
+}
+
+
+.sq.Yellow{
+    border: 2px solid yellow;
+    transition: all 2s, border-radius 3s;
+    transition-delay: .4s;
+}
+.container:hover .sq.Yellow{
+    width:100px;
+    height:100px;
+    border-radius:100%;
+    transform: translateX(500px) rotate(360deg);
+}
+
+
+.sq.Pink{
+    border: 2px solid pink;
+    transition: all 2s, border-radius 3s;
+    transition-delay: .6s;
+}
+.container:hover .sq.Pink{
+    width:25px;
+    height:25px;
+    border-radius:100%;
+    transform: translate(-500px) rotate(-360deg);
+}
+
+
+.sq.CFBlue{
+    border: 2px solid cornflowerblue;
+    transition: all 2s, border-radius 3s;
+    transition-delay: .8s;
+}
+.container:hover .sq.CFBlue{
+    width:100px;
+    height:100px;
+    border-radius:100%;
+    transform: translateX(500px) rotate(360deg);
+}
+
+
+.sq.Black{
+    border: 2px solid black;
+    transition: all 2s, border-radius 3s;
+    transition-delay: 1s;
+}
+.container:hover .sq.Black{
+    width:25px;
+    height:25px;
+    border-radius:100%;
+    transform: translate(-500px) rotate(-360deg);
+}
+
+
+.sq.Blue{
+    border: 2px solid Blue;
+    transition: all 2s, border-radius 3s;
+    transition-delay: 1.2s;
+}
+.container:hover .sq.Blue{
+    width:100px;
+    height:100px;
+    border-radius:100%;
+    transform: translateX(500px) rotate(360deg);
+}
+
+
+.sq.Orange{
+    border: 2px solid orange;
+    transition: all 2s, border-radius 3s;
+    transition-delay: 1.4s;
+}
+.container:hover .sq.Orange{
+    width:25px;
+    height:25px;
+    border-radius:100%;
+    transform: translate(-500px) rotate(-360deg);
+}
+
+
+.sq.Green{
+    border: 2px solid green;
+    transition: all 2s, border-radius 3s;
+    transition-delay: 1.6s;
+}
+.container:hover .sq.Green{
+    width:100px;
+    height:100px;
+    border-radius:100%;
+    transform: translateX(500px) rotate(360deg);
+}
+
+
+.sq.LSGray{
+    border: 2px solid lightslategray;
+    transition: all 2s, border-radius 3s;
+    transition-delay: 1.8s;
+}
+.container:hover .sq.LSGray{
+    width:25px;
+    height:25px;
+    border-radius:100%;
+    transform: translate(-500px) rotate(-360deg);
+}
+
+
+.sq.Purple{
+    border: 2px solid purple;
+    transition: all 2s, border-radius 3s;
+    transition-delay: 2s;
+}
+.container:hover .sq.Purple{
+    width:100px;
+    height:100px;
+    border-radius:100%;
+    transform: translateX(500px) rotate(360deg);
+}
+
+
+.sq.Teal{
+    border: 2px solid teal;
+    transition: all 2s, border-radius 3s;
+    transition-delay: 2.2s;
+}
+.container:hover .sq.Teal{
+    width:25px;
+    height:25px;
+    border-radius:100%;
+    transform: translate(-500px) rotate(-360deg);
+}
+

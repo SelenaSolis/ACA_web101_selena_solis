@@ -1,9 +1,11 @@
 *{
     background-color: #553c4b;
 }
+
 .nav{
     background-color: pink;
 }
+
 nav a p{
     background-color: pink;
     letter-spacing: 100px;
@@ -61,11 +63,17 @@ div h1{
     color:pink;
 }
 
-.name:hover .nameFrame{
-    
+#ifrm {
+    opacity: 0;
+    transition: opacity 1.5s linear;
 }
 
-.nameFrame iframe{
+#name:hover + iframe{
+    opacity: 1;
+    transition: opacity 1.5s linear;
+}
+
+/* .nameFrame iframe{
     width:400px;
     height:400px;
-}
+} */
