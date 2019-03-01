@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./TicTacToeStyles.css">
+    </head>
+    <body>
+        <h1 id="message1">Your marker is X</h1>
+        <h1 id="message2"></h1>
+        <div class="container">
+        <div class="square" id="sq1" onclick="placeMarker('sq1')"></div>
+        <div class="square" id="sq2" onclick="placeMarker('sq2')"></div>
+        <div class="square" id="sq3" onclick="placeMarker('sq3')"></div>
+        <div class="square" id="sq4" onclick="placeMarker('sq4')"></div>
+        <div class="square" id="sq5" onclick="placeMarker('sq5')"></div>
+        <div class="square" id="sq6" onclick="placeMarker('sq6')"></div>
+        <div class="square" id="sq7" onclick="placeMarker('sq7')"></div>
+        <div class="square" id="sq8" onclick="placeMarker('sq8')"></div>
+        <div class="square" id="sq9" onclick="placeMarker('sq9')"></div>
+        </div>
+        <button type="button" onclick="changeMarkerToX()">Change marker to X</button>
+        <button type="button" onclick="changeMarkerToO()">Change marker to 0</button>
+        <button type="button" onclick="decideFirst()">Decide who goes first</button>
+
+        <script src="./TicTacToe.js"></script>
+    </body>
+</html>
