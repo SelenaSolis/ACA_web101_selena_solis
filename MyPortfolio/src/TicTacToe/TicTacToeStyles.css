@@ -4,9 +4,14 @@
   
   body{
     text-align:center;
+    font-family:georgia;
+    font-size:20px;
   }
 
+
   .square{
+    font-size:50px;
+    color:rgb(209, 112, 169);
     width:100px;
     height:100px;
     border:2px solid black;
