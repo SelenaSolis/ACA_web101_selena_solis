@@ -1,39 +1,55 @@
+//user game marker declaration
 var gameMarker= "X";
+//computer game marker declaration
 var compMarker = "O";
+//turn counter declaration
 var turn=0;
+//boolean declaration for winner
 var isWinner = false;
 
-//function changes users marker to X
+var delay = 2000; //2 seconds
+
+
+
+
+
+//function changes users marker to X and computer marker to O
 function changeMarkerToX(){
+  //displays user marker
   document.getElementById('message1').innerHTML = "Your marker is X";
   gameMarker = "X";
   compMarker="O";
 }
 
 
-//function changes users marker to O
+//function changes users marker to O and computer marker to X
 function changeMarkerToO(){
+  //displays user marker
   document.getElementById('message1').innerHTML = "Your marker is O";
   gameMarker = "O";
   compMarker="X";
 }
 
 
-
+//function to decide to makes the first move
 function decideFirst(){
+  //random number either 1 or 2
   var first = Math.floor(Math.random()*2) + 1;
+  //if first==1 user goes first
   if (first == 1){
+    //displays user is first
     document.getElementById('message2').innerHTML = "You go first";
-    turnController(first, gameMarker);
+    turn=1;
   }
-  
+  //if first==2 computer goes first
   else {
+    //displays computer is first
     document.getElementById('message2').innerHTML = "Computer goes first";
-    turnController(first, compMarker);
+    //calls turnController to place computer marker on board
+    turnController(first);
+    turn=1;
   }
 }
-
-
 
 
 //determines who's turn it is
@@ -41,33 +57,45 @@ function decideFirst(){
 //odd user
 function turnController(n) {
    if (!isWinner && n%2 === 0){
-     computerTurn();
+      computerTurn();
    }
 }
 
-
-
-
+//function to place computers marker on board
 function computerTurn(){
+  //declaration of variable for random number 1-9
   var compSquare = Math.floor(Math.random() * 9) + 1;
-   
+   //checks if square is occupied by checking square of random chosen number
    if (document.getElementById('sq' + compSquare).innerHTML ==="X" || document.getElementById('sq' + compSquare).innerHTML==="O"){ 
+    //calls function again if square is occupied
     computerTurn();
   }
   
-   else{
-    document.getElementById('sq'+ compSquare).innerHTML=compMarker;
+  
+  else{
+    //places computer marker in randomly chosen square
+    console.log(compMarker);
+    document.getElementById('sq'+ compSquare).innerHTML = compMarker;
+    //calls function to see if there is a winner
     determineWinner(compMarker);
-     console.log(turn);
-     console.log(compSquare);
+    //adds 1 to the turn
     turn = turn+1;
+    //calls the turn controller function
     turnController(turn);
-   }
+  }
  }
 
 
-
+//function places the correct marker on the board
 function placeMarker(n){
+
+    //requires user to click to decide first player
+    if (turn == 0){
+      document.getElementById('message2').innerHTML = "Click to see who goes first";
+      placeMarker(n);
+    }
+
+    //checks if the user has chosen an occupied square
     if (document.getElementById(n).innerHTML =="X" || document.getElementById(n).innerHTML=="O"){
       document.getElementById('message2').innerHTML="That square is already used"
       placeMarker(n);
@@ -76,13 +104,16 @@ function placeMarker(n){
       document.getElementById(n).innerHTML= gameMarker;
     }
     determineWinner(gameMarker);
-    turn=turn+1;
+    turn = turn+1;
+    console.log(turn);
     turnController(turn);
+
 }
 
 
-
+//determines winner
 function determineWinner(n){
+    //declared variables for each square's content
     var square1 = document.getElementById('sq1').innerHTML;
     var square2 = document.getElementById('sq2').innerHTML;
     var square3 = document.getElementById('sq3').innerHTML;
@@ -92,6 +123,8 @@ function determineWinner(n){
     var square7 = document.getElementById('sq7').innerHTML;
     var square8 = document.getElementById('sq8').innerHTML;
     var square9 = document.getElementById('sq9').innerHTML;
+
+    //if 3 of the same marker in a row declare winner
     if ((square1===square2 && square2===square3 && (square1 === "X" || square1 === "O")) ||
         (square4===square5 && square5===square6 && (square4 === "X" || square4 === "O")) ||
         (square7===square8 && square8===square9 && (square7 === "X" || square7 === "O")) ||
@@ -102,5 +135,9 @@ function determineWinner(n){
         (square3===square5 && square5===square7 && (square3 === "X" || square3 === "O"))){
         document.getElementById('message2').innerHTML = n +" WINS!";
         isWinner = true;
+        var gameBoard = document.getElementById('container');
+        gameBoard.style.pointerEvents = 'none';
     }
+
+
 }
