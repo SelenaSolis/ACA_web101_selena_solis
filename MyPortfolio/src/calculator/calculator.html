@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="calculator.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="display" id="display">
+                <input type="text" id="result">
+            </div>
+            <div class="buttonsContainer">
+                <div class="button clear" ><h2>AC</h2></div>
+                <div class="button posneg"><h2>+/-</h2></div>
+                <div class="button mod"><h2>%</h2></div>
+                <div class="button div" onclick="arith('div')"><h2>/</h2></div>
+                <div class="button 7" onclick="number(7)"><h2>7</h2></div>
+                <div class="button 8" onclick="number(8)"><h2>8</h2></div>
+                <div class="button 9" onclick="number(9)"><h2>9</h2></div>
+                <div class="button mult" onclick="arith('mult')"><h2>X</h2></div>
+                <div class="button 4" onclick="number(4)"><h2>4</h2></div>
+                <div class="button 5" onclick="number(5)"><h2>5</h2></div>
+                <div class="button 6" onclick="number(6)"><h2>6</h2></div>
+                <div class="button sub" onclick="arith('sub')"><h2>-</h2></div>
+                <div class="button 1" onclick="number(1)"><h2>1</h2></div>
+                <div class="button 2" onclick="number(2)"><h2>2</h2></div>
+                <div class="button 3" onclick="number(3)"><h2>3</h2></div>
+                <div class="button add" onclick="arith('add')"><h2>+</h2></div>
+                <div class="button zero" onclick="number(0)"><h2>0</h2></div>
+                <div class="button dec"><h2>.</h2></div>
+                <div class="button eq" id = "equal" onclick="equalFunc()"><h2>=</h2></div>
+            </div>
+        </div>
+        <script src="./calculator.js"></script>
+    </body>
+</html>
