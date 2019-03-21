@@ -5,35 +5,41 @@
     </head>
     <body>
         <div class="gameContainer">
+            <div class="title">
+                <h1>Poo Vaporizer</h1>
+            </div>
             <div class="grid">
                 <div class="square 1" id = "sq1"></div>
-                <div class="square 2" id = "sq2"><img src="poopEmoji.png"></div>
-                <div class="square 3" id = "sq3"><img src="poopEmoji.png"></div>
-                <div class="square 4" id = "sq4"><img src="poopEmoji.png"></div>
-                <div class="square 5" id = "sq5"></div>
-                <div class="square 6" id = "sq6"><img src="poopEmoji.png"></div>
-                <div class="square 7" id = "sq7"><img src="poopEmoji.png"></div>
-                <div class="square 8" id = "sq8"><img src="poopEmoji.png"></div>
-                <div class="square 9" id = "sq9"><img src="poopEmoji.png"></div>
-                <div class="square 10" id = "sq10"><img src="poopEmoji.png"></div>
-                <div class="square 11" id = "sq11"><img src="poopEmoji.png"></div>
-                <div class="square 12" id = "sq12"><img src="poopEmoji.png"></div>
-                <div class="square 13" id = "sq13"><img src="poopEmoji.png"></div>
-                <div class="square 14" id = "sq14"><img src="poopEmoji.png"></div>
-                <div class="square 15" id = "sq15"><img src="poopEmoji.png"></div>
-                <div class="square 16" id = "sq16"><img src="poopEmoji.png"></div>
-                <div class="square 17" id = "sq17"><img src="poopEmoji.png"></div>
-                <div class="square 18" id = "sq18"><img src="poopEmoji.png"></div>
-                <div class="square 19" id = "sq19"><img src="poopEmoji.png"></div>
-                <div class="square 20" id = "sq20"><img src="poopEmoji.png"></div>
-                <div class="square 21" id = "sq21"></div>
-                <div class="square 22" id = "sq22"><img src="poopEmoji.png"></div>
-                <div class="square 23" id = "sq23"><img src="poopEmoji.png"></div>
-                <div class="square 24" id = "sq24"><img src="poopEmoji.png"></div>
-                <div class="square 25" id = "sq25"></div>
+                <div class="square 2" id = "sq2" onclick="clickMe(2)"><img src="poopEmoji.png"></div>
+                <div class="square 3" id = "sq3" onclick="clickMe(3)"><img src="poopEmoji.png"></div>
+                <div class="square 4" id = "sq4" onclick="clickMe(4)"><img src="poopEmoji.png"></div>
+                <div class="square 5" id = "sq5" onclick="clickMe(5)"></div>
+                <div class="square 6" id = "sq6" onclick="clickMe(6)"><img src="poopEmoji.png"></div>
+                <div class="square 7" id = "sq7" onclick="clickMe(7)"><img src="poopEmoji.png"></div>
+                <div class="square 8" id = "sq8" onclick="clickMe(8)"><img src="poopEmoji.png"></div>
+                <div class="square 9" id = "sq9" onclick="clickMe(9)"><img src="poopEmoji.png"></div>
+                <div class="square 10" id = "sq10" onclick="clickMe(10)"><img src="poopEmoji.png"></div>
+                <div class="square 11" id = "sq11" onclick="clickMe(11)"><img src="poopEmoji.png"></div>
+                <div class="square 12" id = "sq12" onclick="clickMe(12)"><img src="poopEmoji.png"></div>
+                <div class="square 13" id = "sq13" onclick="clickMe(13)"><img src="poopEmoji.png"></div>
+                <div class="square 14" id = "sq14" onclick="clickMe(14)"><img src="poopEmoji.png"></div>
+                <div class="square 15" id = "sq15" onclick="clickMe(15)"><img src="poopEmoji.png"></div>
+                <div class="square 16" id = "sq16" onclick="clickMe(16)"><img src="poopEmoji.png"></div>
+                <div class="square 17" id = "sq17" onclick="clickMe(17)"><img src="poopEmoji.png"></div>
+                <div class="square 18" id = "sq18" onclick="clickMe(18)"><img src="poopEmoji.png"></div>
+                <div class="square 19" id = "sq19" onclick="clickMe(19)"><img src="poopEmoji.png"></div>
+                <div class="square 20" id = "sq20" onclick="clickMe(20)"><img src="poopEmoji.png"></div>
+                <div class="square 21" id = "sq21" onclick="clickMe(21)"></div>
+                <div class="square 22" id = "sq22" onclick="clickMe(22)"><img src="poopEmoji.png"></div>
+                <div class="square 23" id = "sq23" onclick="clickMe(23)"><img src="poopEmoji.png"></div>
+                <div class="square 24" id = "sq24" onclick="clickMe(24)"><img src="poopEmoji.png"></div>
+                <div class="square 25" id = "sq25" onclick="clickMe(25)"></div>
+            </div>
+            <div class="counter">
+                <h2>You have vaporized <span id="counter">0</span> poos</h2>
+                <button type="button" class="button" onclick="randomPoop()"><h1>Poo Me</h1></button>
             </div>
         </div>
-        <button type="button" onclick="randomPoop()">Click Me!</button>
         <script src="./stressReliever.js"></script>
     </body>
 </html>

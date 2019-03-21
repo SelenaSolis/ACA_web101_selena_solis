@@ -106,7 +106,7 @@
 	<g>
 		<path class="st1" d="M803.15,29c0,25.41-182.67,46-408,46C206.91,75,48.44,60.63,1.37,41.08"/>
 	</g>
-	<rect class="st1" width="803.15" height="39"/>
+	<rect class="st1" width="800" height="39"/>
 	<ellipse class="st2" cx="396.5" cy="408.95" rx="291.5" ry="328.05"/>
 	<ellipse class="st3" cx="402.26" cy="367" rx="54.63" ry="46"/>
 </g>
