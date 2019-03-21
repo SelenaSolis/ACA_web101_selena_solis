@@ -3,6 +3,8 @@
 }
 
 
+
+
 .gameContainer{
     width:710px;
     height:710px;
@@ -10,6 +12,7 @@
     display:grid;
     grid-template-rows: 80px 580px 50px;
     grid-template-columns: 90px 535px 85px;
+    cursor: url("./spraycan.png"), default;
 }
 
 .grid{
@@ -18,6 +21,7 @@
     display:grid;
     grid-template-rows: 116px 116px 116px 116px 116px;
     grid-template-columns:107px 107px 107px 107px 107px;
+    
 }
 
 .title{
@@ -38,13 +42,14 @@
     grid-template-columns: 440px 280px;
 }
 
-.button{
+#button{
     width:280px;
     height:50px;
     background-color:brown;
+    display:inline-block;
 }
 
-.button h1{
+#button h1{
     text-align:center;
     margin:0px;
 

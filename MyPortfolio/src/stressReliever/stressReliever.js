@@ -8,6 +8,7 @@ function randomPoop(){
     else{
         document.getElementById("sq" + square).style.display = "block";
     }
+    startButton();
 }
 
 function clickMe(n){
@@ -16,4 +17,8 @@ function clickMe(n){
         document.getElementById("counter").innerHTML = parseFloat(document.getElementById("counter").innerHTML) + 1;
         randomPoop();
     }
+}
+
+function startButton(){
+        document.getElementById("button").style.display = "none";
 }
