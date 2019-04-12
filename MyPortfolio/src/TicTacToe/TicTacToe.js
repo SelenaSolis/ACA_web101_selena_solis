@@ -7,48 +7,65 @@ var turn=0;
 //boolean declaration for winner
 var isWinner = false;
 
-var delay = 2000; //2 seconds
+//variable to determine if decide button was clicked;
+var clicked = false;
 
 
+function clearBoard(){
+  for(i=1; i <= 9; i ++){
+    document.getElementById('sq' + i).innerHTML= ' ';
+  }
+  turn = 0;
+  var gameBoard = document.getElementById('container');
+  gameBoard.style.pointerEvents = 'auto';
+  gameBoard.style.backgroundColor = 'white';
+  clicked = false;
+
+}
 
 
 
 //function changes users marker to X and computer marker to O
-function changeMarkerToX(){
-  //displays user marker
-  document.getElementById('message1').innerHTML = "Your marker is X";
+function changeMarker(){
+  if(gameMarker === 'X'){
+    gameMarker = 'O';
+    compMarker = 'X';
+
+    //displays user marker
+    document.getElementById('message1').innerHTML = "Your marker is " + gameMarker;
+  }
+  else {
   gameMarker = "X";
   compMarker="O";
-}
 
-
-//function changes users marker to O and computer marker to X
-function changeMarkerToO(){
   //displays user marker
-  document.getElementById('message1').innerHTML = "Your marker is O";
-  gameMarker = "O";
-  compMarker="X";
+  document.getElementById('message1').innerHTML = "Your marker is " + gameMarker;
+  }
 }
 
 
 //function to decide to makes the first move
 function decideFirst(){
+  
   //random number either 1 or 2
   var first = Math.floor(Math.random()*2) + 1;
   //if first==1 user goes first
-  if (first == 1){
+  if (first === 1 && clicked === false){
     //displays user is first
     document.getElementById('message2').innerHTML = "You go first";
     turn=1;
+    clicked = true;
   }
   //if first==2 computer goes first
-  else {
+  else if (first === 2 && clicked === false){
     //displays computer is first
     document.getElementById('message2').innerHTML = "Computer goes first";
     //calls turnController to place computer marker on board
     turnController(first);
     turn=1;
+    clicked = true;
   }
+  
 }
 
 
@@ -58,11 +75,13 @@ function decideFirst(){
 function turnController(n) {
    if (!isWinner && n%2 === 0){
       computerTurn();
+      console.log("turn")
    }
 }
 
 //function to place computers marker on board
 function computerTurn(){
+
   //declaration of variable for random number 1-9
   var compSquare = Math.floor(Math.random() * 9) + 1;
    //checks if square is occupied by checking square of random chosen number
@@ -88,7 +107,8 @@ function computerTurn(){
 
 //function places the correct marker on the board
 function placeMarker(n){
-
+    //resets isWinner variable after win
+    isWinner = false;
     //requires user to click to decide first player
     if (turn == 0){
       document.getElementById('message2').innerHTML = "Click to see who goes first";
@@ -137,7 +157,7 @@ function determineWinner(n){
         isWinner = true;
         var gameBoard = document.getElementById('container');
         gameBoard.style.pointerEvents = 'none';
+        gameBoard.style.backgroundColor = 'pink';
     }
-
 
 }
