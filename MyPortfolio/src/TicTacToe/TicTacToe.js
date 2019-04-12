@@ -7,8 +7,9 @@ var turn=0;
 //boolean declaration for winner
 var isWinner = false;
 
-//variable to determine if decide button was clicked;
-var clicked = false;
+//variable to determine if decide button was clicked
+var clickedDec = false;
+
 
 
 function clearBoard(){
@@ -19,7 +20,8 @@ function clearBoard(){
   var gameBoard = document.getElementById('container');
   gameBoard.style.pointerEvents = 'auto';
   gameBoard.style.backgroundColor = 'white';
-  clicked = false;
+  clickedDec = false;
+  isWinner = false;
 
 }
 
@@ -27,14 +29,14 @@ function clearBoard(){
 
 //function changes users marker to X and computer marker to O
 function changeMarker(){
-  if(gameMarker === 'X'){
+  if(gameMarker === 'X' && turn <= 1){
     gameMarker = 'O';
     compMarker = 'X';
 
     //displays user marker
     document.getElementById('message1').innerHTML = "Your marker is " + gameMarker;
   }
-  else {
+  else if (gameMarker === 'O' && turn <= 1){
   gameMarker = "X";
   compMarker="O";
 
@@ -50,20 +52,20 @@ function decideFirst(){
   //random number either 1 or 2
   var first = Math.floor(Math.random()*2) + 1;
   //if first==1 user goes first
-  if (first === 1 && clicked === false){
+  if (first === 1 && clickedDec === false){
     //displays user is first
     document.getElementById('message2').innerHTML = "You go first";
     turn=1;
-    clicked = true;
+    clickedDec = true;
   }
   //if first==2 computer goes first
-  else if (first === 2 && clicked === false){
+  else if (first === 2 && clickedDec === false){
     //displays computer is first
     document.getElementById('message2').innerHTML = "Computer goes first";
     //calls turnController to place computer marker on board
     turnController(first);
-    turn=1;
-    clicked = true;
+    turn = 1;
+    clickedDec = true;
   }
   
 }
