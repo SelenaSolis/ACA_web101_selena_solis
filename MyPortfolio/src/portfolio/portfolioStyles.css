@@ -34,28 +34,28 @@ div h1{
 
 .intro{
     width:100%;
-    margin: 200px auto;
+    margin: 100px auto;
 }
 
 .projectList{
     display:flex;
     flex-direction: row;
-    align-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .project{
     border: 3px solid white;
     width:300px;
-    height:300px;
-    margin:30px 30px;
+    height:320px;
+    margin:15px 15px;
 }
 
 .project a img{
     border:1px solid white;
     width:250px;
     height:250px;
-    margin:0px 21px;
+    margin:10px 21px;
 }
 
 .project a{

@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+}
+#products{
+    background-color: rgb(238, 223, 228);
+}
+
+header{
+    background-color: #b3759e;
+    height:85px;
+}
+
+.title:hover{
+    cursor: pointer;
+}
+
+.title h1{
+    margin: 7px auto;
+}
+
+.title h4{
+    margin: auto;
+}
+
+.header{
+    text-align: center;
+    height:85px;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.centerHeader{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.centerHeader div{
+    align-items: center;
+}
+
+input{
+    width: 500px;
+}
+
+#signUp{
+    text-Align:center;
+    height:200px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#products{
+    display: flex;
+    flex-wrap:wrap;
+
+}
+
+#products > #product{
+    border: 1px solid rgb(148, 148, 148);
+    width: 250px;
+    height: auto;
+    text-align:center;
+}
+
+#product a div{
+    height: 250px;
+}
+
+div.review{
+    height: auto;
+    border: 1px solid rgb(148, 148, 148);
+    background-color:white;
+}
+
+.cart{
+    margin:0px 30px;
+    display:flex;
+    align-items: center;
+}
+
+.cart img{
+    border: 1px solid #b3759e;
+}
+
+.cart img:hover{
+    opacity: .6;
+    cursor: pointer;
+}
+
+img:hover{
+    opacity: .6;
+    cursor: pointer;
+}
+
+a h4:hover{
+    opacity: .6;
+    cursor: pointer;
+}
+
+#categories{
+    margin: 0 10px;
+    width: 150px;
+}
+
+#cart{
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:20px;
+    background-color: rgb(192, 161, 190);
+    border-radius: 100%;
+    padding: 0 5px;
+    top:25px;
+    right:30px; 
+}
+
+.cartButton {
+    background-color:#6b2f5c;
+    border: 1px solid #a04288;
+	border-radius:12px;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:12px;
+	padding:3px 25px;
+}
+.cartButton:hover {
+    background-color:#7e4d71;
+}
+
+.hiddenReviews{
+    position: absolute;
+    margin: 0px 0px 600px 200px;
+    max-height:300px;
+}
+
+#subtotal{
+    float: right;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+#checkoutButton{
+    width: 200px;
+    text-align: center;
+    margin: 20px 0px;
+}
